@@ -29,11 +29,12 @@ export default async function ({
 
   // merge provided configs.
   // specific mode configs will be merged to the default config
+
   return merge(
     rawConfig.default,
-    rawConfig[quasarMode],
-    process.env.DEV ? rawConfig.dev : {},
-    process.env.PROD ? rawConfig.prod : {},
+    // rawConfig[quasarMode],
+    process.env.DEV && rawConfig.dev ? rawConfig.dev : {},
+    process.env.PROD && rawConfig.prod ? rawConfig.prod : {},
     quasarMode === 'ssr' && onServer ? rawConfig.ssrOnServer : {},
     quasarMode === 'ssr' && !onServer ? rawConfig.ssrOnClient : {}
   );

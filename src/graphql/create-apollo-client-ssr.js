@@ -1,5 +1,4 @@
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
+import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client/core';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import fetch from 'node-fetch';
 import {
@@ -29,7 +28,7 @@ export default async function ({
   }
 
   // create apollo client link
-  const link = new HttpLink(cfg.httpLinkConfig);
+  const link = createHttpLink(cfg.httpLinkConfig);
 
   // create apollo client cache
   const cache = new InMemoryCache(cfg.cacheConfig);

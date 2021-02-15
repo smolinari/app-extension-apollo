@@ -11,6 +11,13 @@ module.exports = function () {
       required: false,
       message: 'GraphQL endpoint URI (You can skip it now and set it later)',
       default: 'http://api.example.com'
+    },
+    {
+      // Ask the user if the Vue-Apollo components should also be installed
+      name: 'installVueApolloComponents',
+      type: 'confirm',
+      message: 'Should the Vue-Apollo Components also be installed?',
+      default: false // optional
     }
   ]
 }

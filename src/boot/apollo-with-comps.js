@@ -1,5 +1,6 @@
 import { boot } from 'quasar/wrappers';
 import { DefaultApolloClient } from '@vue/apollo-composable';
+import  * as VueApolloComponents from '@vue/apollo-components';
 import VueApollo from '@vue/apollo-option';
 import getApolloClientConfig from '../graphql/get-apollo-client-config';
 import createApolloClient from '../graphql/create-apollo-client';
@@ -45,9 +46,9 @@ export default boot(async ({ app, router, store, urlPath, redirect }) => {
     urlPath,
     redirect
   });
+  //add apollo components  
+  app.use(VueApolloComponents);
 
   // attach created 'apollo provider' instance to the app
-  app.config.globalProperties.$apollo = apolloProvider
-
+  app.provide(DefaultApolloClient, apolloProvider);
 });
-

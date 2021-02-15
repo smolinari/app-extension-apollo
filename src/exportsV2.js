@@ -4,7 +4,7 @@
 // thus removing the need to run the queries again in the client
 // https://ssr.vuejs.org/guide/build-config.html#manual-asset-injection
 module.exports.graphqlHtml = `
-    <% // added by 'quasar-app-extension-apollo' %>
+    <% // added by 'quasar-app-extension-apollo-v2' %>
     <% if (ctx.mode.ssr && process.env.MODE === 'ssr') { %>
       {{{ renderState({ contextKey: 'apolloState', windowKey: '__APOLLO_STATE__' }) }}}
     <% } %>
