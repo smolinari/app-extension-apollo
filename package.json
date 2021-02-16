@@ -1,0 +1,41 @@
+{
+  "name": "@quasar/quasar-app-extension-apollo-v2",
+  "version": "2.0.0-alpha.1",
+  "description": "A Quasar app extension to add GraphQL support via Apollo Client and the vue-apollo plugin.",
+  "contributors": [
+    "Ejez <ejez@protonmail.ch>",
+    "Scott Molinari <scott.molinari@adduco.de>"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quasarframework/app-extension-apollo"
+  },
+  "bugs": "https://github.com/quasarframework/app-extension-apollo/issues",
+  "homepage": "https://quasar.dev",
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "dependencies": {
+    "@apollo/client": "^v3.3.7",
+    "@vue/apollo-components": "^4.0.0-alpha.11",
+    "@vue/apollo-composable": "^4.0.0-alpha.12",
+    "@vue/apollo-option": "^4.0.0-alpha.11",
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
+    "node-fetch": "^2.6.0",
+    "vue": "^3.0.5",
+    "vue-demi": "^0.6.0",
+    "webpack-merge": "^5.7.3"
+  }
+}
